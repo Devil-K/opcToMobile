@@ -3,6 +3,8 @@ package com.neuqmsc.controller;
 import com.neuqmsc.config.WebSocketServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -12,7 +14,7 @@ import java.io.IOException;
  * WebSocketController
  * @author zhengkai.blog.csdn.net
  */
-@RestController
+@Controller
 public class DemoController {
 
 
@@ -24,9 +26,10 @@ public class DemoController {
 
     @RequestMapping("/sendMessageTo/allUser")
     public ResponseEntity<String> Test() throws Exception{
-        WebSocketServer webSocketServer = new WebSocketServer();
+       // WebSocketServer webSocketServer = new WebSocketServer();
         String message="这是我发送给所有客户端的消息this is My Message";
-        webSocketServer.sendMessage(message);
+        //webSocketServer.sendMessage(message);
+        WebSocketServer.sendInfo(message,message);
 
 
         return ResponseEntity.ok("hhhhh");
@@ -42,8 +45,18 @@ public class DemoController {
     public ResponseEntity<String> pushToWeb(String message,
                               @PathVariable String toUserId) throws IOException {
 //        message="wode的";
+        WebSocketServer webSocketServer = new WebSocketServer();
         System.out.println("这是message"+message);
-        WebSocketServer.sendInfo(message,toUserId);
+        webSocketServer.sendInfo(message,toUserId);
         return ResponseEntity.ok("MSG SEND SUCCESS");
+       // @Scheduled(fixedRate = 10000)
+    }
+    @Scheduled(fixedRate = 10000)
+    public void sendTopic() throws IOException {
+        String random = Math.random()+"";
+        System.out.println(random+"一秒钟传输一次random");
+        WebSocketServer.sendInfo(random,random);
+
+
     }
 }
