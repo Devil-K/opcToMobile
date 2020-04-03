@@ -4,9 +4,12 @@ import com.neuqmsc.entity.PlcDevice;
 import com.neuqmsc.mapper.PlcDeviceMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020/4/2 21:55
  * @ItemName: opcToMobile
  */
-@RestController
+@Controller
 //@EnableAutoConfiguration
 public class GetValController {
 @Autowired
@@ -30,10 +33,11 @@ PlcDeviceMapper plcdevice;
         return plcDevice;
     }
 
-    @ResponseBody
+
     @RequestMapping("/hello")
     public String getHello(){
         System.out.print("hello");
-        return "hello Test";
+        new ModelAndView("websocket");
+        return  "websocket";
     }
 }
