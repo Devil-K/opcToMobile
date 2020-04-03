@@ -51,7 +51,7 @@ public class DemoController {
         return ResponseEntity.ok("MSG SEND SUCCESS");
        // @Scheduled(fixedRate = 10000)
     }
-    @Scheduled(fixedRate = 10000)
+   // @Scheduled(fixedRate = 10000)
     public void sendTopic() throws IOException {
         String random = Math.random()+"";
         System.out.println(random+"一秒钟传输一次random");

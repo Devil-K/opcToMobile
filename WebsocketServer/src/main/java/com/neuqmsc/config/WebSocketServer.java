@@ -129,7 +129,7 @@ public class WebSocketServer {
         log.info("发送消息到:"+userId+"，报文:"+message);
 
         for (String key:webSocketMap.keySet()){
-            webSocketMap.get(key).sendMessage(message+"对应的Value"+webSocketMap.get(key));
+            webSocketMap.get(key).sendMessage(message);
         }
 //        if(StringUtils.isNotBlank(userId)&&webSocketMap.containsKey(userId)){
 //            webSocketMap.get(userId).sendMessage(message);
