@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a5af836-3b11-43be-a65d-01020c07d884" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/controller/SentValToMobile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/sendMegService/MyThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/controller/DemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/websocketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/websocketApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsocketServer/target/classes/com/neuqmsc/controller/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/target/classes/com/neuqmsc/controller/DemoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsocketServer/target/classes/com/neuqmsc/websocketApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/target/classes/com/neuqmsc/websocketApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/target/TestApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/target/TestApp-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/target/TestApp-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/target/TestApp-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dubboDemo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -144,7 +141,7 @@
       <updated>1585824070077</updated>
       <workItem from="1585824074330" duration="7908000" />
       <workItem from="1585837624558" duration="4452000" />
-      <workItem from="1585842594442" duration="12954000" />
+      <workItem from="1585842594442" duration="20983000" />
     </task>
     <task id="LOCAL-00001" summary="2020-04-03">
       <created>1585843963649</created>
@@ -174,7 +171,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585885203732</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2020-04-03-1858 set 1 second to value">
+      <created>1585911528820</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585911528820</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2020-04-03-2323 finish to JSON 1 second">
+      <created>1585927436289</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585927436289</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +196,9 @@
     <MESSAGE value="2020-04-03-0021" />
     <MESSAGE value="2020-04-03-1119" />
     <MESSAGE value="2020-04-03-1119websocket--mybatis" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-04-03-1119websocket--mybatis" />
+    <MESSAGE value="2020-04-03-1858 set 1 second to value" />
+    <MESSAGE value="2020-04-03-2323 finish to JSON 1 second" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-04-03-2323 finish to JSON 1 second" />
   </component>
   <component name="WindowStateProjectService">
     <state x="232" y="6" key="#Project_Structure" timestamp="1585840302285">
@@ -200,70 +213,82 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="344" y="238" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.690@0.0.1280.690" timestamp="1585835740457" />
-    <state x="210" y="0" key="CommitChangelistDialog2" timestamp="1585885201637">
+    <state x="210" y="0" key="CommitChangelistDialog2" timestamp="1585927430842">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="210" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1585885201637" />
-    <state x="420" y="102" key="FileChooserDialogImpl" timestamp="1585881629266">
+    <state x="210" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1585927430842" />
+    <state width="930" height="459" key="DebuggerActiveHint" timestamp="1585924056651">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="420" y="102" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1585881629266" />
-    <state width="1237" height="380" key="GridCell.Tab.0.bottom" timestamp="1585911419498">
+    <state width="930" height="459" key="DebuggerActiveHint/0.0.1280.690@0.0.1280.690" timestamp="1585924056651" />
+    <state x="120" y="50" key="DiffContextDialog" timestamp="1585927460517">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585911419498" />
-    <state width="1237" height="380" key="GridCell.Tab.0.center" timestamp="1585911419498">
+    <state x="120" y="50" key="DiffContextDialog/0.0.1280.690@0.0.1280.690" timestamp="1585927460517" />
+    <state x="420" y="102" key="FileChooserDialogImpl" timestamp="1585921804966">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1585911419498" />
-    <state width="1237" height="380" key="GridCell.Tab.0.left" timestamp="1585911419498">
+    <state x="420" y="102" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1585921804966" />
+    <state width="1237" height="136" key="GridCell.Tab.0.bottom" timestamp="1585927294545">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1585911419498" />
-    <state width="1237" height="380" key="GridCell.Tab.0.right" timestamp="1585911419498">
+    <state width="1237" height="136" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585927294545" />
+    <state width="1237" height="136" key="GridCell.Tab.0.center" timestamp="1585927294544">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1585911419498" />
-    <state width="1237" height="380" key="GridCell.Tab.1.bottom" timestamp="1585911419499">
+    <state width="1237" height="136" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1585927294544" />
+    <state width="1237" height="136" key="GridCell.Tab.0.left" timestamp="1585927294542">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585911419499" />
-    <state width="1237" height="380" key="GridCell.Tab.1.center" timestamp="1585911419499">
+    <state width="1237" height="136" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1585927294542" />
+    <state width="1237" height="136" key="GridCell.Tab.0.right" timestamp="1585927294545">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1585911419499" />
-    <state width="1237" height="380" key="GridCell.Tab.1.left" timestamp="1585911419498">
+    <state width="1237" height="136" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1585927294545" />
+    <state width="1237" height="136" key="GridCell.Tab.1.bottom" timestamp="1585927294545">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1585911419498" />
-    <state width="1237" height="380" key="GridCell.Tab.1.right" timestamp="1585911419499">
+    <state width="1237" height="136" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585927294545" />
+    <state width="1237" height="136" key="GridCell.Tab.1.center" timestamp="1585927294545">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="380" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1585911419499" />
-    <state width="1237" height="208" key="GridCell.Tab.2.bottom" timestamp="1585842482373">
+    <state width="1237" height="136" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1585927294545" />
+    <state width="1237" height="136" key="GridCell.Tab.1.left" timestamp="1585927294545">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.2.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585842482373" />
-    <state width="1237" height="208" key="GridCell.Tab.2.center" timestamp="1585842482373">
+    <state width="1237" height="136" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1585927294545" />
+    <state width="1237" height="136" key="GridCell.Tab.1.right" timestamp="1585927294545">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.2.center/0.0.1280.690@0.0.1280.690" timestamp="1585842482373" />
-    <state width="1237" height="208" key="GridCell.Tab.2.left" timestamp="1585842482373">
+    <state width="1237" height="136" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1585927294545" />
+    <state width="1237" height="94" key="GridCell.Tab.2.bottom" timestamp="1585924269046">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.2.left/0.0.1280.690@0.0.1280.690" timestamp="1585842482373" />
-    <state width="1237" height="208" key="GridCell.Tab.2.right" timestamp="1585842482373">
+    <state width="1237" height="94" key="GridCell.Tab.2.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585924269046" />
+    <state width="1237" height="94" key="GridCell.Tab.2.center" timestamp="1585924269046">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.2.right/0.0.1280.690@0.0.1280.690" timestamp="1585842482373" />
+    <state width="1237" height="94" key="GridCell.Tab.2.center/0.0.1280.690@0.0.1280.690" timestamp="1585924269046" />
+    <state width="1237" height="94" key="GridCell.Tab.2.left" timestamp="1585924269046">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="94" key="GridCell.Tab.2.left/0.0.1280.690@0.0.1280.690" timestamp="1585924269046" />
+    <state width="1237" height="94" key="GridCell.Tab.2.right" timestamp="1585924269046">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="94" key="GridCell.Tab.2.right/0.0.1280.690@0.0.1280.690" timestamp="1585924269046" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1585843694344">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1585843694344" />
-    <state x="232" y="80" key="Vcs.Push.Dialog.v2" timestamp="1585885297653">
+    <state x="232" y="80" key="Vcs.Push.Dialog.v2" timestamp="1585927466440">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="232" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1585885297653" />
+    <state x="232" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1585927466440" />
+    <state x="194" y="83" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585924251361">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="194" y="83" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.690@0.0.1280.690" timestamp="1585924251361" />
     <state x="14" y="48" key="new project wizard" timestamp="1585840035144">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -276,5 +301,31 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="303" y="11" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1585839776254" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/service/sendValService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/service/sendValService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/controller/SentValToMobile.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/WebsocketServer/src/main/java/com/neuqmsc/controller/SentValToMobile.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
