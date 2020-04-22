@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a5af836-3b11-43be-a65d-01020c07d884" name="Default Changelist" comment="" />
+    <list default="true" id="5a5af836-3b11-43be-a65d-01020c07d884" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/WebsocketServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +139,7 @@
       <workItem from="1585824074330" duration="7908000" />
       <workItem from="1585837624558" duration="4452000" />
       <workItem from="1585842594442" duration="25461000" />
-      <workItem from="1587464315554" duration="5631000" />
+      <workItem from="1587464315554" duration="5688000" />
     </task>
     <task id="LOCAL-00001" summary="2020-04-03">
       <created>1585843963649</created>
@@ -188,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585962272994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2020-04-03-2323 finish to JSON 1 second 完成对象转换json，并转换为String类型，使用gson传输，1.5秒传输一次">
+      <created>1587546643369</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587546643369</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,10 +226,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="344" y="238" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.690@0.0.1280.690" timestamp="1585835740457" />
-    <state x="210" y="0" key="CommitChangelistDialog2" timestamp="1585962267872">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1587546761106">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="210" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1585962267872" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1587546761106" />
     <state width="930" height="459" key="DebuggerActiveHint" timestamp="1585924056651">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -285,10 +294,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1585843694344" />
-    <state x="232" y="80" key="Vcs.Push.Dialog.v2" timestamp="1585962286406">
+    <state x="232" y="80" key="Vcs.Push.Dialog.v2" timestamp="1587546776262">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="232" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1585962286406" />
+    <state x="232" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1587546776262" />
     <state x="194" y="83" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585924251361">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
