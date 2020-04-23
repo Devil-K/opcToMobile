@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a5af836-3b11-43be-a65d-01020c07d884" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WebsocketServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/src/main/java/com/neuqmsc/H5ServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/src/main/java/com/neuqmsc/bean/Neuqusers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/src/main/java/com/neuqmsc/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/src/main/java/com/neuqmsc/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5Server/src/main/resources/templates/userList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userServer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userServer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userServer/userServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebsocketServer/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebsocketServer/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebsocketServer/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,6 +64,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -52,7 +73,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dubboDemo" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/H5Server/src/main/java/com/neuqmsc/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/H5Server/src/main/resources/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,9 +88,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.neuqmsc.bean" />
       <recent name="com.neuqmsc.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="K:\JavaDubbo\opcToMobile\H5Server\src\main\resources\static" />
       <recent name="K:\JavaDubbo\opcToMobile\WebsocketServer\src\main\java\com\neuqmsc" />
       <recent name="K:\JavaDubbo\opcToMobile\TestApp\src\main\resources" />
       <recent name="K:\JavaDubbo\opcToMobile\WebsocketServer\src\main\resources" />
@@ -80,7 +104,20 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.websocketApplication">
+  <component name="RunManager" selected="Spring Boot.UserServerApplication (1)">
+    <configuration name="H5ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="H5Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neuqmsc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neuqmsc.H5ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="TestApp" />
       <extension name="coverage">
@@ -90,6 +127,26 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.neuqmsc.TestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="userServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neuqmsc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neuqmsc.UserServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="userServer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neuquser.UserServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,8 +166,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.websocketApplication" />
+        <item itemvalue="Spring Boot.H5ServerApplication" />
+        <item itemvalue="Spring Boot.UserServerApplication (1)" />
         <item itemvalue="Spring Boot.TestApplication" />
+        <item itemvalue="Spring Boot.websocketApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +198,7 @@
       <workItem from="1585824074330" duration="7908000" />
       <workItem from="1585837624558" duration="4452000" />
       <workItem from="1585842594442" duration="25461000" />
-      <workItem from="1587464315554" duration="5688000" />
+      <workItem from="1587464315554" duration="26314000" />
     </task>
     <task id="LOCAL-00001" summary="2020-04-03">
       <created>1585843963649</created>
@@ -197,7 +256,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587546643369</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2020-04-03-2323 finish to JSON 1 second 完成对象转换json，并转换为String类型，使用gson传输，1.5秒传输一次">
+      <created>1587546762088</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587546762088</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2020-04-22-1719">
+      <created>1587547196609</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587547196609</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,25 +284,26 @@
     <MESSAGE value="2020-04-03-1858 set 1 second to value" />
     <MESSAGE value="2020-04-03-2323 finish to JSON 1 second" />
     <MESSAGE value="2020-04-03-2323 finish to JSON 1 second 完成对象转换json，并转换为String类型，使用gson传输，1.5秒传输一次" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-04-03-2323 finish to JSON 1 second 完成对象转换json，并转换为String类型，使用gson传输，1.5秒传输一次" />
+    <MESSAGE value="2020-04-22-1719" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-04-22-1719" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="232" y="6" key="#Project_Structure" timestamp="1585840302285">
+    <state x="232" y="6" key="#Project_Structure" timestamp="1587571441669">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="232" y="6" key="#Project_Structure/0.0.1280.690@0.0.1280.690" timestamp="1585840302285" />
-    <state x="445" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1585885876778">
+    <state x="232" y="6" key="#Project_Structure/0.0.1280.690@0.0.1280.690" timestamp="1587571441669" />
+    <state x="445" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1587612910751">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="445" y="53" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1585885876778" />
+    <state x="445" y="53" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1587612910751" />
     <state x="344" y="238" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585835740457">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="344" y="238" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.690@0.0.1280.690" timestamp="1585835740457" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1587546761106">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1587547195009">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1587546761106" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1587547195009" />
     <state width="930" height="459" key="DebuggerActiveHint" timestamp="1585924056651">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -242,38 +316,38 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="420" y="102" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1587523466500" />
-    <state width="1237" height="323" key="GridCell.Tab.0.bottom" timestamp="1587484488944">
+    <state width="1237" height="110" key="GridCell.Tab.0.bottom" timestamp="1587654600624">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587484488944" />
-    <state width="1237" height="323" key="GridCell.Tab.0.center" timestamp="1587484488944">
+    <state width="1237" height="110" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587654600624" />
+    <state width="1237" height="110" key="GridCell.Tab.0.center" timestamp="1587654600624">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1587484488944" />
-    <state width="1237" height="323" key="GridCell.Tab.0.left" timestamp="1587484488943">
+    <state width="1237" height="110" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1587654600624" />
+    <state width="1237" height="110" key="GridCell.Tab.0.left" timestamp="1587654600624">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1587484488943" />
-    <state width="1237" height="323" key="GridCell.Tab.0.right" timestamp="1587484488944">
+    <state width="1237" height="110" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1587654600624" />
+    <state width="1237" height="110" key="GridCell.Tab.0.right" timestamp="1587654600624">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1587484488944" />
-    <state width="1237" height="323" key="GridCell.Tab.1.bottom" timestamp="1587484488945">
+    <state width="1237" height="110" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1587654600624" />
+    <state width="1237" height="110" key="GridCell.Tab.1.bottom" timestamp="1587654600625">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587484488945" />
-    <state width="1237" height="323" key="GridCell.Tab.1.center" timestamp="1587484488944">
+    <state width="1237" height="110" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587654600625" />
+    <state width="1237" height="110" key="GridCell.Tab.1.center" timestamp="1587654600625">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1587484488944" />
-    <state width="1237" height="323" key="GridCell.Tab.1.left" timestamp="1587484488944">
+    <state width="1237" height="110" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1587654600625" />
+    <state width="1237" height="110" key="GridCell.Tab.1.left" timestamp="1587654600624">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1587484488944" />
-    <state width="1237" height="323" key="GridCell.Tab.1.right" timestamp="1587484488945">
+    <state width="1237" height="110" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1587654600624" />
+    <state width="1237" height="110" key="GridCell.Tab.1.right" timestamp="1587654600625">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="323" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1587484488945" />
+    <state width="1237" height="110" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1587654600625" />
     <state width="1237" height="94" key="GridCell.Tab.2.bottom" timestamp="1586062027029">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -294,26 +368,30 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1585843694344" />
-    <state x="232" y="80" key="Vcs.Push.Dialog.v2" timestamp="1587546776262">
+    <state x="232" y="80" key="Vcs.Push.Dialog.v2" timestamp="1587547202971">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="232" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1587546776262" />
+    <state x="232" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1587547202971" />
+    <state x="439" y="125" key="chooseDestDirectoryDialog" timestamp="1587617636775">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="439" y="125" key="chooseDestDirectoryDialog/0.0.1280.690@0.0.1280.690" timestamp="1587617636775" />
     <state x="194" y="83" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585924251361">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="194" y="83" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.690@0.0.1280.690" timestamp="1585924251361" />
-    <state x="14" y="48" key="new project wizard" timestamp="1585995575863">
+    <state x="29" y="78" key="new project wizard" timestamp="1587571423674">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="14" y="48" key="new project wizard/0.0.1280.690@0.0.1280.690" timestamp="1585995575863" />
+    <state x="29" y="78" key="new project wizard/0.0.1280.690@0.0.1280.690" timestamp="1587571423674" />
     <state x="296" y="153" width="672" height="677" key="run.anything.popup" timestamp="1585824394917">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="296" y="153" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1585824394917" />
-    <state x="303" y="11" key="search.everywhere.popup" timestamp="1585839776254">
+    <state x="303" y="11" width="672" height="678" key="search.everywhere.popup" timestamp="1587632247976">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="303" y="11" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1585839776254" />
+    <state x="303" y="11" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1587632247976" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

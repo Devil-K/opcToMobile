@@ -11,6 +11,8 @@
     <modules>
         <module>WebsocketServer</module>
         <module>TestApp</module>
+        <module>userServer</module>
+        <module>H5Server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

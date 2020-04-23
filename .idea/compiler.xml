@@ -6,15 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WebsocketServer" />
         <module name="TestApp" />
+        <module name="userServer" />
+        <module name="WebsocketServer" />
+        <module name="H5Server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="H5Server" options="-parameters" />
       <module name="TestApp" options="-parameters" />
       <module name="WebsocketServer" options="-parameters" />
+      <module name="userServer" options="-parameters" />
     </option>
   </component>
 </project>
