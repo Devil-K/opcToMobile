@@ -1,13 +1,13 @@
 package com.neuqmsc.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.neuqmsc.pojo.NeuqUsers;
 import com.neuqmsc.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,14 +18,14 @@ import javax.annotation.Resource;
  */
 @Controller
 public class UserController {
-   // @Resource
+
     @Reference
     UserService userservice;
 
-//    @ResponseBody
+    @ResponseBody
     @RequestMapping("/gethello")
     public String getList(){
-        //String allUsers = userservice.getAllUsers();
-        return "userList";
+        List<NeuqUsers> allUsers = userservice.getAllUsers();
+        return allUsers.toString();
     }
 }

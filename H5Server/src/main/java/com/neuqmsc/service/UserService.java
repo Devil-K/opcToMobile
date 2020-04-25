@@ -1,6 +1,9 @@
 package com.neuqmsc.service;
 
 
+import com.neuqmsc.pojo.NeuqUsers;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,6 +14,6 @@ package com.neuqmsc.service;
  */
 
 public interface UserService {
-    public String getAllUsers();
-
+    public NeuqUsers joinIn();
+    public List<NeuqUsers> getAllUsers();
 }

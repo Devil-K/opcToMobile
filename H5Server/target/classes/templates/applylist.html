@@ -8,13 +8,21 @@
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<div>
+		<ul class="breadcrumb" style="margin: 0px;">
+			<li>管理</li>
+			<li>员工申请列表</li>
+
+		</ul>
+	</div>
+
 <table class="table table-bordered">
     <thead>
     <tr>
-        <th>Student-ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Grade</th><th>Grade</th>
+        <th>员工姓名</th>
+        <th>邮箱账号</th>
+        <th>员工职级</th>
+        <th>人员管理权限</th><th>操作</th>
     </tr>
     </thead>
     <tbody>
@@ -22,7 +30,14 @@
         <td>001</td>
         <td>Rammohan </td>
         <td>Reddy</td>
-        <td>A+</td><th>Grade</th>
+        <td>A+</td><th><button class="btn btn-danger "
+								onclick="location.href='${APP_PATH}/deleteByState?userid=${emp.userid }'">
+								<span class="" aria-hidden="true"></span>同意
+							</button>
+							<button class="btn btn-primary"
+								onclick="location.href='${APP_PATH}/QueryFORChange?userid=${emp.userid }'">
+								<span class="" aria-hidden="true"></span>拒绝
+							</button></th>
     </tr>
     <tr>
         <td>002</td>

@@ -1,6 +1,8 @@
 package com.neuqmsc.service;
 
-import com.neuqmsc.bean.Neuqusers;
+
+import com.neuqmsc.entity.NeuqUsers;
+import com.neuqmsc.entity.NeuqUsers;
 
 import java.util.List;
 
@@ -8,9 +10,11 @@ import java.util.List;
  * Created by IntelliJ IDEA.
  *
  * @Auther: jkMa
- * @Date: 2020/4/23 00:14
+ * @Date: 2020/4/23 11:29
  * @ItemName: opcToMobile
  */
+
 public interface UserService {
-public String getAllUsers();
+    public NeuqUsers joinIn();
+    public List<NeuqUsers> getAllUsers();
 }

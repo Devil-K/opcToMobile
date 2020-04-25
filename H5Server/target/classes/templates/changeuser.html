@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>使用bootstrap的表格实例</title>
+    <meta name="description"
+          content="Creating a table with Bootstrap. Learn how to use Bootstrap toolkit to create Tables with examples.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div>
+
+    <a class="btn btn btn-info" href="#" role="button" disabled="disabled">Link</a>
+    <a class="btn btn btn-info" href="#" role="button" disabled="disabled">Link</a> <
+    <a class="btn btn-default"  href="#" role="button" disabled="disabled">员工信息修改</a>
+
+</div>
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">员工姓名</label>
+        <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> -->
+        <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">邮箱地址</label>
+        <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+        <!-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile">员工职级</label>
+        <select class="form-control" required name="power" id="power">
+            <option value="">${oneUserList.power=="1"?"工程师":"操作员"}</option>
+            <option value="1">工程师</option>
+            <option value="2">操作员</option>
+            <option value="1">宾客</option>
+
+        </select>
+
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> 是否有人员管理权限
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default">确认修改</button>
+</form>
+
+</body>
+</html>
