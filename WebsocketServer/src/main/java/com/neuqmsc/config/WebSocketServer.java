@@ -77,7 +77,7 @@ public class WebSocketServer {
      * @param message 客户端发送过来的消息*/
     @OnMessage
     public void onMessage(String message, Session session) {
-        log.info("用户消息:"+userId+",报文:"+message);
+//        log.info("用户消息:"+userId+",报文:"+message);
         //可以群发消息
         //消息保存到数据库、redis
         if(StringUtils.isNotBlank(message)){
@@ -126,7 +126,7 @@ public class WebSocketServer {
      * 发送自定义消息
      * */
     public static void sendInfo(String message,@PathParam("userId") String userId) throws IOException {
-        log.info("发送消息到:"+userId+"，报文:"+message);
+//        log.info("发送消息到:"+userId+"，报文:"+message);
 
         for (String key:webSocketMap.keySet()){
             webSocketMap.get(key).sendMessage(message);

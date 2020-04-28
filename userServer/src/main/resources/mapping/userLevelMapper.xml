@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuqmsc.mapper.userLevelMapper">
+  <resultMap id="BaseResultMap" type="com.neuqmsc.entity.userLevel">
+    <id column="Level_id" jdbcType="INTEGER" property="levelId" />
+    <result column="Level_name" jdbcType="VARCHAR" property="levelName" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from neuq_level
+    where Level_id = #{levelId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.neuqmsc.entity.userLevel">
+    insert into neuq_level (Level_id, Level_name)
+    values (#{levelId,jdbcType=INTEGER}, #{levelName,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.neuqmsc.entity.userLevel">
+    update neuq_level
+    set Level_name = #{levelName,jdbcType=VARCHAR}
+    where Level_id = #{levelId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select Level_id, Level_name
+    from neuq_level
+    where Level_id = #{levelId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select Level_id, Level_name
+    from neuq_level
+  </select>
+</mapper>

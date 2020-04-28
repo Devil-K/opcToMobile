@@ -3,74 +3,99 @@
 
 
 <head>
-<meta charset="utf-8" />
-<title>注册</title>
-<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
-<script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
-<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <meta charset="utf-8" />
+    <title>注册</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 
 </head>
 
 <body style="text-align: center; width: 100%; margin: 0 auto;">
-	<br />
-	<h1>
-		<span class="label label-info">用户注册</span>
-	</h1>
-	<div style="padding: 100px 100px 10px;">
- <form class="form-horizontal" role="form" action="#" th:action="@{../addUser}" th:object="${member}" method="post">	
- 		<div class="form-group">
-				<label>用户名</label> <input type="text" name="username"
-					class="form-control" id="exampleInputName2" placeholder="请输入用户名" />
-			</div>
+<h1>
+    <span class="label label-info">注册</span>
+</h1>
+<div style="padding: 10px 100px 100px;">
+    <form class="form-horizontal" role="form" action="#" th:action="@{../applyToRegist}" th:object="${neuqUsers}"
+          method="post">
+        用户名:
+        <div class="form-group">
+            <input type="text" name="userName"
+                   class="form-control" placeholder="请输入姓名"/>
+        </div>
 
 
-			<div class="form-group">
-				<label>密码</label> <input type="password" name="password"
-					class="form-control" id="exampleInputName2" placeholder="请输入密码" />
-			</div>
-			
-			<div class="form-group">
-				<label for="exampleInputName2">邮箱地址</label> <input type="text"
-				name="email"
-					class="form-control" id="phone" placeholder="请输入电子邮箱" />
-			</div>
-			<div class="form-group">
-				<label for="exampleInputEmail2">验证码</label>
-				 <input type="text" id="yzm"
-					placeholder="请输入接收到的验证码" />
-				<input type="button" id="btn" value="发送验证码" onclick="settime(this),send()" /> 
-			</div>
-			
-			
-			<button type="submit" class="btn btn-primary">提交注册信息</button>
-		</form>
-		
-	</div>
- <script type="text/javascript">
-        function send(){
-            $.ajax({
-                url:"sendMessage",
-                type:"GET",
-                data:"phone="+$("#phone").val(),
-                success:function(data){
-                	alert("发送邮件了");
-                }
-            });
+        <div class="form-group">
+            <label>密码</label> <input type="password" name="userPassword"
+                                     class="form-control" id="" placeholder="请输入密码"/>
+        </div>
+
+        <div class="form-group">
+            <label for="">邮箱地址</label> <input type="text"
+                                              name="userAccount"
+                                              class="form-control" id="phone" placeholder="请输入电子邮箱"/>
+        </div>
+        <div class="form-group">
+            <label>员工职级</label>
+            <select class="form-control" required name="userLevel" id="userLevel">
+                <option th:each="level:${userLevel}" th:value=" ${level.levelId}" th:text="${level.levelName}"></option>
+            </select>
+
+        </div>
+        人员管理权限：
+        <div class="form-group form-inline">
+            <div class="radio"><label><input type="radio" name="peopleManage"
+                                             th:value="1">有</label>
+            </div>
+            <div class="radio"><label><input type="radio" name="peopleManage"
+                                             th:value="0">无</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">验证码</label>
+            <input type="text" id="yzm" name="yzm"
+                   placeholder="请输入接收到的验证码"/>
+            <input type="button" id="btn" value="发送验证码" onclick="settime(this),send()"/>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">提交注册信息</button>
+    </form>
+
+</div>
+<script type="text/javascript">
+    function send() {
+        $.ajax({
+            url: "sendMessage",
+            type: "GET",
+            data: "phone=" + $("#phone").val(),
+            success: function (data) {
+                // alert("发送邮件了");
+                console.log("已经发送成功了" + data)
+            },
+            error: function (data) {
+                console.log("发送失败了" + data)
+            }
+        });
+    }
+
+    var countdown = 10;
+
+    function settime(val) {
+        if (countdown == 0) {
+            val.removeAttribute("disabled");
+            val.value = "免费获取验证码";
+            countdown = 10;
+            return;
+        } else {
+            val.setAttribute("disabled", true);
+            val.value = "重新发送(" + countdown + ")";
+            countdown--;
         }
-        var countdown=10;
-        function settime(val) { 
-            if (countdown == 0) { 
-                val.removeAttribute("disabled"); 
-                val.value="免费获取验证码"; 
-                countdown = 10;
-                return;
-            } else { 
-                val.setAttribute("disabled", true); 
-                val.value="重新发送(" + countdown + ")"; 
-                countdown--; 
-            } 
-            setTimeout(function() { 
-                settime(val) },1000)} 
-    </script> 
+        setTimeout(function () {
+            settime(val)
+        }, 1000)
+    }
+</script>
 </body>
 </html>

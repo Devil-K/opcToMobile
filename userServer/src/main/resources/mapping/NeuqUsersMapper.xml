@@ -1,28 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuqmsc.mapper.NeuqUsersMapper">
-  <resultMap id="BaseResultMap" type="com.neuqmsc.entity.NeuqUsers">
-    <id column="User_id" jdbcType="INTEGER" property="userId" />
-    <result column="User_name" jdbcType="VARCHAR" property="userName" />
-    <result column="User_account" jdbcType="VARCHAR" property="userAccount" />
-    <result column="User_password" jdbcType="VARCHAR" property="userPassword" />
-    <result column="User_level" jdbcType="INTEGER" property="userLevel" />
-    <result column="People_manage" jdbcType="INTEGER" property="peopleManage" />
-    <result column="Remark" jdbcType="INTEGER" property="remark" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <resultMap id="BaseResultMap" type="com.neuqmsc.entity.NeuqUsers">
+        <id column="User_id" jdbcType="INTEGER" property="userId"/>
+        <result column="User_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="User_account" jdbcType="VARCHAR" property="userAccount"/>
+        <result column="User_password" jdbcType="VARCHAR" property="userPassword"/>
+        <result column="level_name" jdbcType="VARCHAR" property="levelName"/>
+
+        <result column="User_level" jdbcType="INTEGER" property="userLevel"/>
+        <result column="People_manage" jdbcType="INTEGER" property="peopleManage"/>
+        <result column="Remark" jdbcType="INTEGER" property="remark"/>
+    </resultMap>
+
+    <!--登陆验证-->
+    <select id="doLogin" parameterType="String" resultMap="BaseResultMap">
+select User_id, User_name, User_account, User_level,People_manage,
+    Remark
+    from neuq_users
+    where User_account = #{useraccount,jdbcType=VARCHAR} AND
+      User_password = #{userpassword,jdbcType=VARCHAR} AND Remark=1
+    </select>
+    <!--修改密码 查询账号存在-->
+    <select id="checkAccount" parameterType="String" resultMap="BaseResultMap">
+    select User_id, User_name, User_account, User_level,People_manage,
+    Remark
+    from neuq_users
+    where User_account = #{useraccount,jdbcType=VARCHAR} AND Remark=1
+    </select>
+    <!--自己修改密码姓名-->
+    <update id="updateBySelf" parameterType="com.neuqmsc.entity.NeuqUsers">
+      update neuq_users
+    set User_name = #{userName,jdbcType=VARCHAR},
+
+      User_password = #{userPassword,jdbcType=VARCHAR}
+
+    where User_id = #{userId,jdbcType=INTEGER}
+    </update>
+
+    <!--注册账号查重checkUserExist-->
+    <select id="checkUserExist" parameterType="String" resultMap="BaseResultMap">
+        select User_id, User_name, User_account, User_level,People_manage,
+    Remark
+    from neuq_users
+    where User_account = #{useraccount,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from neuq_users
     where User_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.neuqmsc.entity.NeuqUsers">
+    <insert id="insert" parameterType="com.neuqmsc.entity.NeuqUsers">
     insert into neuq_users (User_id, User_name, User_account, 
       User_password, User_level, People_manage, 
       Remark)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userAccount,jdbcType=VARCHAR}, 
       #{userPassword,jdbcType=VARCHAR}, #{userLevel,jdbcType=INTEGER}, #{peopleManage,jdbcType=INTEGER}, 
-      #{remark,jdbcType=INTEGER})
+      2)
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.neuqmsc.entity.NeuqUsers">
+    <!--deleteByuserId 根据id删除用户（改变用户状态值）-->
+    <update id="deleteByuserId" parameterType="java.lang.Integer">
+    update neuq_users
+    set
+      Remark = -1
+    where User_id = #{userId,jdbcType=INTEGER}
+  </update>
+    <update id="updateByPrimaryKey" parameterType="com.neuqmsc.entity.NeuqUsers">
     update neuq_users
     set User_name = #{userName,jdbcType=VARCHAR},
       User_account = #{userAccount,jdbcType=VARCHAR},
@@ -32,16 +75,51 @@
       Remark = #{remark,jdbcType=INTEGER}
     where User_id = #{userId,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select User_id, User_name, User_account, User_password, User_level, People_manage, 
+    <!--提交修改的信息-->
+    <update id="updateByManager" parameterType="com.neuqmsc.entity.NeuqUsers">
+ update neuq_users
+    set User_name = #{userName,jdbcType=VARCHAR},
+      User_account = #{userAccount,jdbcType=VARCHAR},
+
+      User_level = #{userLevel,jdbcType=INTEGER},
+      People_manage = #{peopleManage,jdbcType=INTEGER},
+      Remark = 1
+    where User_id = #{userId,jdbcType=INTEGER}
+    </update>
+
+    <!--同意-->
+    <update id="agreeApply" parameterType="java.lang.Integer">
+        update neuq_users
+    set
+      Remark = 1
+    where User_id = #{userId,jdbcType=INTEGER}
+    </update>
+    <!--不同意-->
+    <update id="disagreeApply" parameterType="java.lang.Integer">
+        update neuq_users
+    set
+      Remark = -1
+    where User_id = #{userId,jdbcType=INTEGER}
+    </update>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select User_id, User_name, User_account, User_level, Level_name,People_manage,
     Remark
-    from neuq_users
+    from neuq_users u LEFT JOIN neuq_level l ON  u.User_level=l.Level_id
     where User_id = #{userId,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select User_id, User_name, User_account, User_password, User_level, People_manage, 
+    <!--查看全部用户-->
+    <select id="selectAll" resultMap="BaseResultMap">
+    select User_id, User_name, User_account, User_level,Level_name, People_manage,
     Remark
-    from neuq_users
+    from neuq_users u LEFT JOIN neuq_level l ON  u.User_level=l.Level_id
+    where Remark=1
+  </select>
+    <!--所有申请列表-->
+    <select id="selectApplyList" resultMap="BaseResultMap">
+    select User_id, User_name, User_account, User_level,Level_name, People_manage,
+    Remark
+    from neuq_users u LEFT JOIN neuq_level l ON  u.User_level=l.Level_id
+    where Remark=2
   </select>
 
 

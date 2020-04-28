@@ -1,96 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title>使用bootstrap的表格实例</title>
-    <meta name="description" content="Creating a table with Bootstrap. Learn how to use Bootstrap toolkit to create Tables with examples.">
+    <meta name="description"
+          content="Creating a table with Bootstrap. Learn how to use Bootstrap toolkit to create Tables with examples.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div>
-		<ul class="breadcrumb" style="margin: 0px;">
-			<li>管理</li>
-			<li>员工列表</li>
-
-		</ul>
-	</div>
+    <a class="btn btn-default" href="#" role="button" disabled="true">员工列表</a><
+    <a class="btn btn btn-info" th:href="'/showApplyList'" role="button">查看申请</a>
+</div>
 <table class="table table-bordered">
     <thead>
     <tr>
         <th>员工姓名</th>
         <th>邮箱账号</th>
         <th>员工职级</th>
-        <th>人员管理权限</th><th>操作</th>
+        <th>人事权限</th>
+        <th>操作</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>001</td>
-        <td>Rammohan </td>
-        <td>Reddy</td>
-        <td>A+</td><th><button class="btn btn-danger "
-								onclick="location.href='${APP_PATH}/deleteByState?userid=${emp.userid }'">
-								<span class="" aria-hidden="true"></span>删除员工
-							</button>
-							<button class="btn btn-primary"
-								onclick="location.href='${APP_PATH}/QueryFORChange?userid=${emp.userid }'">
-								<span class="" aria-hidden="true"></span>信息修改
-							</button></th>
-    </tr>
-    <tr>
-        <td>002</td>
-        <td>Smita</td>
-        <td>Pallod</td>
-        <td>A</td><th>Grade</th>
-    </tr>
-    <tr>
-        <td>003</td>
-        <td>Rabindranath</td>
-        <td>Sen</td>
-        <td>A+</td><th>Grade</th>
+    <tr th:each="item:${allUserList.list}">
+        <td th:text="${item.userName}"></td>
+        <td th:text="${item.userAccount}"></td>
+        <td th:text="${item.levelName}"></td>
+        <td th:text="${item.peopleManage==1?'有':'无'}"></td>
+        <th>
+            <!--<a class="btn btn "
+               onclick="location.href='/deleteUser?user_id=' + ${item.userId }+''">
+                <span class="" aria-hidden="true"></span>删除
+            </a>-->
+            <a class="btn btn " th:href="'/deleteUser?user_id=' + ${item.userId}">删除</a>
+
+            <a class="btn btn " th:href="'/changeUser?user_id=' + ${item.userId}">修改</a>
+            <!--<a class="btn"
+               onclick="location.href='/changeUser?user_id=' + ${item.userId }+''">
+                <span class="" aria-hidden="true"></span>修改
+            </a>-->
+        </th>
     </tr>
     </tbody>
 </table>
 
 <div class="row">
-		<!-- 分页文字信息 -->
-		<div class="col-md-3" id="page_info">  总共${serList.getTotal()}条记录.共${serList.getPages() }页</div>
-		<!-- 分页条信息 -->
-		<div class="col-md-6" id="page_line">
+    <!-- 分页文字信息 -->
+    <div class="col-md-3" id="page_info"> 总共
+        <h7 th:text="${allUserList.getTotal()}"/>
+        条记录.共
+        <h7 th:text="${allUserList.getPages()}"/>
+        页
+    </div>
+</div>
+<div class="modal-footer no-margin-top">
+    <ul class="pagination pull-right no-margin">
 
-			<nav aria-label="Page navigation">
-			<ul class="pagination">
-			<li><a href="${APP_PATH }/mainIndex?pn=1" aria-label="Previous"> <span
-						aria-hidden="true">首页</span>
-				</a></li>
-				<li><a href="${APP_PATH }/mainIndex?pn=${serList.prePage}" aria-label="Previous"> <span
-						aria-hidden="true">上一页</span>
-				</a></li>
+        <!-- 首页 -->
+        <li>
+            <a th:href="'/showAllusers?pn=0'">首页</a>
+        </li>
 
-				<c:forEach items="${serList.navigatepageNums }" var="num">
-					<c:if test="${num==serList.pageNum }">
-						<li class="active"><a>${num}</a></li>
-					</c:if>
+        <!-- 上一页 -->
+        <li th:if="${allUserList.hasPreviousPage}">
+            <a th:href="'/showAllusers?pn=' + ${allUserList.prePage}" th:text="上一页"></a>
+        </li>
 
-					<c:if test="${num!=serList.pageNum }">
-						<li><a href="${APP_PATH }/mainIndex?pn=${num}">${num}</a></li>
+        <!-- 中间页 -->
+        <li th:each="pageNum:${allUserList.navigatepageNums}">
+            <a th:href="'/showAllusers?pn=' + ${pageNum}" th:text="${pageNum}"
+               th:if="${pageNum ne allUserList.getPageNum()}"></a>
+            <a th:href="'/showAllusers?pn=' + ${pageNum}" th:text="${pageNum}"
+               th:if="${pageNum eq allUserList.getPageNum()}" th:style="'font-weight:bold;background: #6faed9;'"></a>
+        </li>
+        <!-- 下一页 -->
+        <li th:if="${allUserList.isHasNextPage()}">
+            <a th:href="'/showAllusers?pn=' + ${allUserList.nextPage}" th:text="下一页"></a>
+        </li>
 
-					</c:if>
+        <!-- 尾页 -->
+        <li>
+            <a th:href="'/showAllusers?pn=' + ${allUserList.pages}">尾页</a>
+        </li>
 
-				</c:forEach>
-
-				<li><a href="${APP_PATH }/mainIndex?pn=${serList.nextPage}" aria-label="Next"> <span aria-hidden="true">下一页</span>
-				</a></li>
-				<li><a href="${APP_PATH }/mainIndex?pn=${serList.pages}" aria-label="Previous"> <span
-						aria-hidden="true">末页</span>
-				</a></li>
-			</ul>
-			</nav>
-		</div>
-	</div>
-
-
+    </ul>
+</div>
 
 </body>
 </html>

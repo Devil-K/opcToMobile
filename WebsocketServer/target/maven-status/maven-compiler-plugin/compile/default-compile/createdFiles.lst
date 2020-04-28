@@ -1,0 +1,9 @@
+com\neuqmsc\config\WebSocketConfig.class
+com\neuqmsc\controller\DemoController.class
+com\neuqmsc\websocketApplication.class
+com\neuqmsc\config\FastjsonConverter.class
+com\neuqmsc\service\sendValService.class
+com\neuqmsc\mapper\PlcDeviceMapper.class
+com\neuqmsc\controller\SentValToMobile.class
+com\neuqmsc\entity\PlcDevice.class
+com\neuqmsc\config\WebSocketServer.class

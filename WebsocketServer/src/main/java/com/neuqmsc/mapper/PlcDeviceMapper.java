@@ -17,4 +17,7 @@ public interface PlcDeviceMapper {
     List<PlcDevice> selectAll();
 
     int updateByPrimaryKey(PlcDevice record);
+    int checkTable(@Param("deviceName") String deviceName);
+    int creatTableByDeviceName(@Param("deviceName") String deviceName);
+    int saveDeviceVal(@Param("deviceValue") String deviceValue,@Param("deviceName") String deviceName);
 }

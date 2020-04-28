@@ -31,4 +31,27 @@
     select Device_name, Device_value, Device_time
     from neuq_plc_device
   </select>
+  <!--int checkTable(String deviceName);
+    int creatTableByDeviceName(String deviceName);
+    int saveDeviceVal(String deviceValue);-->
+
+  <!-- 验证表是否存在 -->
+  <select id="checkTable" parameterType="java.lang.String" resultType="int">
+  select count(*) from information_schema.TABLES where table_name =#{deviceName,jdbcType=VARCHAR}
+  </select>
+
+  <!-- 创建表 -->
+  <update id="creatTableByDeviceName" parameterType="String">
+  CREATE TABLE ${deviceName} (
+  deviceId int(11) NOT NULL AUTO_INCREMENT,
+  deviceValue DECIMAL(10,3) DEFAULT NULL,
+  devicetime varchar(25) null ,
+	PRIMARY KEY (`deviceId`))
+  </update>
+
+  <!--插入数据  -->
+  <insert id="saveDeviceVal" parameterType="String">
+  insert into ${deviceName}(deviceValue,devicetime) values(#{deviceValue},NOW())
+  </insert>
+
 </mapper>

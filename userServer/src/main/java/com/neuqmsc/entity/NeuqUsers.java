@@ -3,6 +3,9 @@ package com.neuqmsc.entity;
 import java.io.Serializable;
 
 public class NeuqUsers implements Serializable {
+    private String yzm;
+    private String levelName;
+
     private Integer userId;
 
     private String userName;
@@ -16,6 +19,14 @@ public class NeuqUsers implements Serializable {
     private Integer peopleManage;
 
     private Integer remark;
+
+    public String getLevelName() {
+        return levelName;
+    }
+
+    public void setLevelName(String levelName) {
+        this.levelName = levelName;
+    }
 
     public Integer getUserId() {
         return userId;
@@ -71,5 +82,28 @@ public class NeuqUsers implements Serializable {
 
     public void setRemark(Integer remark) {
         this.remark = remark;
+    }
+
+    public String getYzm() {
+        return yzm;
+    }
+
+    public void setYzm(String yzm) {
+        this.yzm = yzm;
+    }
+
+    @Override
+    public String toString() {
+        return "NeuqUsers{" +
+                "yzm='" + yzm + '\'' +
+                ", levelName='" + levelName + '\'' +
+                ", userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userAccount='" + userAccount + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userLevel=" + userLevel +
+                ", peopleManage=" + peopleManage +
+                ", remark=" + remark +
+                '}';
     }
 }

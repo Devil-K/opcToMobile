@@ -44,16 +44,18 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.4.0</version>
+            <version>3.5.3</version>
         </dependency>
-        <dependency>
+
+        <!--<dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
             <version>3.3.7</version>
-        </dependency>
+        </dependency>-->
         <!-- 阿里巴巴数据源 -->
         <dependency>
             <groupId>com.alibaba</groupId>
